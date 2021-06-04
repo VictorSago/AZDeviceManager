@@ -14,7 +14,7 @@ This project is part of the Lexicon .NET Programming course.
 
 ## Labs
 
-Several labs are performed in the course of the project. Each of the labs requires some Azure service. 
+Several labs are performed in the course of the project. Each of the labs requires some Azure service.
 
 ### Lab 1: Publishing
 
@@ -26,7 +26,7 @@ The page is then published to an Azure Web App.
 
 ### Lab 2: DevOps
 
-Azure DevOps
+Establish a build pipeline and two release pipelines on Azure DevOps. Add some tests that are run before publishing.
 
 ### Lab 3: Identity
 
