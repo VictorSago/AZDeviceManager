@@ -1,6 +1,6 @@
-namespace AZDeviceManager.Models
+namespace AZDeviceManager.Models.Entities
 {
-    public class Location
+    public class DeviceLocation
     {
         public string City { get; set; }
         public string Country { get; set; }

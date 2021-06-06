@@ -18,7 +18,7 @@
     @foreach (var device in DeviceList)
     {
         <tr>
-            <td>@device.Id.ToString()</td>
+            <td>@device.DeviceId.ToString()</td>
             <td>@device.Name</td>
             <td>@device.StatusString</td>
             <td>@device.LatestData</td>
@@ -34,21 +34,21 @@
     {
         new Device
         {
-            Id = Guid.NewGuid(),
+            DeviceId = Guid.NewGuid(),
             Name = " Device 1",
             Status = DeviceStatus.Offline,
             LatestData = "Device1 Data"
         },
         new Device
         {
-            Id = Guid.NewGuid(),
+            DeviceId = Guid.NewGuid(),
             Name = " Device 2",
             Status = DeviceStatus.Online,
             LatestData = "Device2 Data"
         },
         new Device
         {
-            Id = Guid.NewGuid(),
+            DeviceId = Guid.NewGuid(),
             Name = " Device 3",
             Status = DeviceStatus.Online,
             LatestData = "Device3 Data"
