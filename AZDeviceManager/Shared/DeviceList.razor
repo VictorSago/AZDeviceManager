@@ -1,14 +1,15 @@
-﻿<!-- device list -->
+﻿@using System.Globalization
+<!-- device list -->
 <div id="device-list" class="card shadow">
     <div class="content">
         <div class="d-flex align-items-center justify-content-between">
             <div>
                 <div class="title">List of Devices</div>
-                <div class="ingress text-sub">5 devices total</div>
+                <div class="ingress text-sub">@_devices.Count().ToString() devices total</div>
             </div>
             <button class="btn btn-purple">New Device</button>
         </div>
-
+        
         <div class="devices mt-4">
             <table class="table mt-4">
                 <thead>
@@ -38,7 +39,7 @@
                             <div class="ingress">@device.Location.Country</div>
                         </td>
                         <td>
-                            <div>@device.LastUpdate</div>
+                            <div>@device.LastUpdateString</div>
                             <div class="ingress">Last Updated</div>
                         </td>
                         <td>
@@ -46,7 +47,18 @@
                             <div class="ingress">@device.Type.Description</div>
                         </td>
                         <td>
-                            <div class="status-online">@device.StatusString</div>
+                            @if (device.Status == DeviceStatus.Online)
+                            {
+                                <div class="status-online">@device.Status</div>
+                            }
+                            else if (device.Status == DeviceStatus.Offline)
+                            {
+                                <div class="status-offline">@device.Status</div>
+                            }
+                            else
+                            {
+                                <div class="status-unknown">@device.Status</div>
+                            }
                         </td>
                         <td>
                             <div class="d-flex justify-content-between align-items-center">
@@ -73,6 +85,7 @@
     {
         _devices = new List<Device>();
         _devices = await client.GetFromJsonAsync<IEnumerable<Device>>("https://azdev1.azurewebsites.net/api/mock/devices");
+        Console.WriteLine($"Devices: {_devices.Count().ToString()}");
     }
 
 }

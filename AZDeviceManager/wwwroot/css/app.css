@@ -176,7 +176,8 @@ body {
 }
 
 .status-online,
-.status-offline {
+.status-offline,
+.status-unknown {
     width: 80px;
     padding: 0.3rem 0;
     text-align: center;
@@ -193,6 +194,11 @@ body {
 .status-offline {
     color: #c97584;
     background: #ffe1e8;
+}
+
+.status-unknown {
+    color: #e03060;
+    background: #ffc0c0;
 }
 
 #blazor-error-ui {
