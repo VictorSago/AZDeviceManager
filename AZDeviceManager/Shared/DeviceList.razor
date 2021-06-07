@@ -85,7 +85,6 @@
     {
         _devices = new List<Device>();
         _devices = await client.GetFromJsonAsync<IEnumerable<Device>>("https://azdev1.azurewebsites.net/api/mock/devices");
-        Console.WriteLine($"Devices: {_devices.Count().ToString()}");
     }
 
 }
