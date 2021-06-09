@@ -1,4 +1,4 @@
-namespace AZDeviceManager.Models.Entities
+namespace AZDeviceManager.Models
 {
     public class DeviceLocation
     {
