@@ -123,6 +123,11 @@ body {
 #dashboard .gridview .card .content .sync-icon {
     font-size: 1.3rem;
     color: #b4b3b9;
+    cursor: pointer;
+}
+
+#dashboard .gridview .card .content .sync-icon:active {
+    color: #607080;
 }
 
 #dashboard .gridview .card .content .stats .stat-list-item {

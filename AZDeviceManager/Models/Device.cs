@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace AZDeviceManager.Models.Entities
+namespace AZDeviceManager.Models
 {
     public class Device
     {
